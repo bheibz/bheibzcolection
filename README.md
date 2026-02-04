@@ -57,3 +57,13 @@ Daftar di bawah ini mengikuti isi `repos.md` saat ini:
 - Web: https://github.com/bheibz/the-power-of-berbagi
 - GitHub: https://github.com/bheibz/bheibz
 - Dikerjakan oleh bheibz digital meedia dan codex
+
+## Donasi
+
+Terima donasi uang dan barang elektronik komputer.
+Untuk detail rekening atau alamat pengiriman, silakan hubungi saya.
+
+## Kontribusi
+
+Panduan kontribusi ada di `CONTRIBUTING.md`.
+Daftar repo rekomendasi ada di `RECOMMENDED_REPOS.md`.
