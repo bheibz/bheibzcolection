@@ -7,6 +7,8 @@ TMP_DIR="${HOME}/Downloads"
 
 mkdir -p "$APP_DIR" "$BIN_DIR" "$TMP_DIR"
 
+# Pin versi deb khusus
+PINNED_DEB_URL="https://github.com/lencx/Noi/releases/download/v1.0.0/noi_1.0.0_amd64.deb"
 api_url="https://api.github.com/repos/lencx/noi/releases/latest"
 
 os_id=""
@@ -19,7 +21,13 @@ if [[ "$os_id" == "debian" || "$os_id" == "ubuntu" ]]; then
   want_deb=1
 fi
 
-asset_url="$(curl -fsSL "$api_url" | python3 - <<'PY'
+asset_url=""
+if [[ "$want_deb" -eq 1 ]]; then
+  asset_url="$PINNED_DEB_URL"
+fi
+
+if [[ -z "$asset_url" ]]; then
+  asset_url="$(curl -fsSL "$api_url" | python3 - <<'PY'
 import json, sys, re
 try:
     data = json.load(sys.stdin)
@@ -41,6 +49,7 @@ except Exception:
 print("")
 PY
  "$want_deb")"
+fi
 
 if [[ -z "$asset_url" ]]; then
   echo "Gagal menemukan rilis Noi (deb/AppImage) di GitHub Releases." >&2
