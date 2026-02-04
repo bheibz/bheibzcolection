@@ -29,6 +29,14 @@ Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
 Repo ini punya workflow yang otomatis update setiap hari jam 06:00 WIB (UTC+7) dan commit perubahan `vendor/` ke repo ini.
 Kamu juga bisa menjalankan manual lewat tab Actions di GitHub.
 
+## Status Otomatisasi
+
+<!-- status:start -->
+Terakhir digenerate: (belum pernah)
+
+Validasi `repos.md`: OK
+<!-- status:end -->
+
 ## Fitur Aplikasi (Daftar di repos.md)
 
 Daftar di bawah ini mengikuti isi `repos.md` saat ini:
@@ -43,3 +51,9 @@ Daftar di bawah ini mengikuti isi `repos.md` saat ini:
 - cmd: curl -qL https://www.npmjs.com/install.sh | sh
 - deps: wget curl python3
 <!-- repos:list:end -->
+
+## Promosi
+
+- Web: https://github.com/bheibz/the-power-of-berbagi
+- GitHub: https://github.com/bheibz/bheibz
+- Dikerjakan oleh bheibz digital meedia dan codex

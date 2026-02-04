@@ -25,6 +25,8 @@ jobs:
         run: |
           chmod +x scripts/update-readme.sh
           scripts/update-readme.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         run: |
