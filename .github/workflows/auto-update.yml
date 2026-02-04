@@ -2,7 +2,7 @@ name: Auto Update Repos
 
 on:
   schedule:
-    - cron: "0 2 * * *" # 02:00 UTC daily
+    - cron: "0 19 * * *" # 02:00 WIB (UTC+7) daily
   workflow_dispatch:
 
 permissions:
