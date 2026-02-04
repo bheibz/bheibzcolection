@@ -23,6 +23,8 @@ Sekarang defaultnya **tidak clone** agar hemat kuota. Gunakan `--clone` jika ing
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/bheibz/bheibzcolection/main/bootstrap.sh)"
 ```
 
+Folder akan dibuat di `~/bheibzcolection`.
+
 ## Cara pakai
 
 1. Tambahkan link repo di `repos.md` (satu per baris, bisa pakai bullet `- `).

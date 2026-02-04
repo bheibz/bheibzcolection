@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_URL="https://github.com/bheibz/bheibzcolection"
-DIR_NAME="bheibzcolection"
+DIR_NAME="${HOME}/bheibzcolection"
 
 if ! command -v git >/dev/null 2>&1; then
   echo "git belum terpasang. Silakan install git terlebih dahulu." >&2
