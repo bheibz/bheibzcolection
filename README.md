@@ -26,5 +26,15 @@ Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
 
 ## Auto Update (GitHub Actions)
 
-Repo ini punya workflow yang otomatis update setiap hari jam 02:00 WIB (UTC+7) dan commit perubahan `vendor/` ke repo ini.
+Repo ini punya workflow yang otomatis update setiap hari jam 06:00 WIB (UTC+7) dan commit perubahan `vendor/` ke repo ini.
 Kamu juga bisa menjalankan manual lewat tab Actions di GitHub.
+
+## Fitur Aplikasi (Daftar di repos.md)
+
+Daftar di bawah ini mengikuti isi `repos.md` saat ini:
+- `google-gemini/gemini-cli`: CLI untuk menggunakan Gemini.
+- `QwenLM/qwen-code`: CLI/alat terkait Qwen Code.
+- `lencx/Noi`: Aplikasi desktop (butuh Node.js 20+).
+- `cmd: curl -fsS https://dl.brave.com/install.sh | sh`: Install Brave Browser.
+- `cmd: curl -qL https://www.npmjs.com/install.sh | sh`: Install Node.js via script npmjs.
+- `deps: wget curl python3`: Dependency dasar untuk beberapa installer.
