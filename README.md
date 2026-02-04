@@ -61,7 +61,12 @@ Daftar di bawah ini mengikuti isi `repos.md` saat ini:
 ## Donasi
 
 Terima donasi uang dan barang elektronik komputer.
-Untuk detail rekening atau alamat pengiriman, silakan hubungi saya.
+Untuk konfirmasi transfer atau donasi barang, hubungi WhatsApp: +62895 1313 2933.
+
+Metode donasi:
+- Dana/OVO/GoPay: +62895 1313 2933
+- blu: konfirmasi via WhatsApp
+- BRI: konfirmasi via WhatsApp
 
 ## Kontribusi
 
