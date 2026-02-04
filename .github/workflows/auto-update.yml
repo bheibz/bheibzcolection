@@ -21,6 +21,10 @@ jobs:
         run: |
           chmod +x install.sh
           ./install.sh
+      - name: Update README list
+        run: |
+          chmod +x scripts/update-readme.sh
+          scripts/update-readme.sh
 
       - name: Commit changes
         run: |
