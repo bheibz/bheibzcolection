@@ -1,6 +1,9 @@
 # Daftar Repo
 
 - deps: wget curl python3
+- cmd: sudo apt-get install -y aria2
+- cmd: curl -sL https://git.io/vokNn | bash
+- cmd: sudo sed -i 's/^_MAXNUM=.*/_MAXNUM=32/' /etc/apt-fast.conf
 - cmd: curl -qL https://www.npmjs.com/install.sh | sh
 - https://github.com/google-gemini/gemini-cli
 - cmd: npm install -g @google/gemini-cli
