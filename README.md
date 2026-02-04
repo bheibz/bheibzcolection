@@ -5,11 +5,16 @@
   <img src="https://img.shields.io/github/actions/workflow/status/bheibz/bheibzcolection/auto-update.yml" alt="actions" />
   <img src="https://img.shields.io/github/last-commit/bheibz/bheibzcolection" alt="last-commit" />
   <img src="https://img.shields.io/github/repo-size/bheibz/bheibzcolection" alt="repo-size" />
+  <img src="https://img.shields.io/badge/WhatsApp-+62895%201313%202933-25D366?logo=whatsapp&logoColor=white" alt="whatsapp" />
+  <img src="https://img.shields.io/badge/Donasi-Dana%20%7C%20OVO%20%7C%20GoPay-blue" alt="donasi" />
 </div>
 
 # Repo Installer
 
 Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
+
+Catatan penting: script ini **meng-clone repo** dan **menjalankan command** yang kamu tulis di `repos.md`.
+Proses instalasi aplikasi tergantung pada masing-masing repo/command (misalnya `cmd:` untuk installer).
 
 ## Satu Perintah (PC Baru)
 
