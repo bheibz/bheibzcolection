@@ -7,6 +7,7 @@ DEST_DIR="$ROOT_DIR/vendor"
 RUN_COMMANDS=0
 INSTALL_DEPS=0
 AUTO_UPDATE=1
+DO_CLONE=0
 
 deps_list=()
 cmd_list=()
@@ -17,12 +18,13 @@ for arg in "$@"; do
     --run-commands) RUN_COMMANDS=1 ;;
     --install-deps) INSTALL_DEPS=1 ;;
     --no-update) AUTO_UPDATE=0 ;;
+    --clone) DO_CLONE=1 ;;
     -h|--help)
       cat <<'USAGE'
-Usage: ./install.sh [--run-commands] [--install-deps] [--no-update]
+Usage: ./install.sh [--run-commands] [--install-deps] [--no-update] [--clone]
 
 Reads repos.md and:
-- clones GitHub repos
+- clones GitHub repos (opsional, gunakan --clone)
 - optionally runs command lines prefixed with "cmd:"
 - optionally installs deps listed with "deps:"
 USAGE
@@ -113,24 +115,28 @@ if [[ "${#deps_list[@]}" -gt 0 ]]; then
 fi
 
 if [[ "${#repo_list[@]}" -gt 0 ]]; then
-  for repo_url in "${repo_list[@]}"; do
-    repo_name="$(basename "$repo_url" .git)"
-    owner="$(basename "$(dirname "$repo_url")")"
-    target_dir="$DEST_DIR/${owner}-${repo_name}"
+  if [[ "$DO_CLONE" -ne 1 ]]; then
+    echo "Lewati clone repo (default). Gunakan --clone jika ingin clone."
+  else
+    for repo_url in "${repo_list[@]}"; do
+      repo_name="$(basename "$repo_url" .git)"
+      owner="$(basename "$(dirname "$repo_url")")"
+      target_dir="$DEST_DIR/${owner}-${repo_name}"
 
-    if [[ -d "$target_dir/.git" ]]; then
-      if [[ "$AUTO_UPDATE" -eq 1 ]]; then
-        echo "Update $target_dir"
-        git -C "$target_dir" pull --ff-only
-      else
-        echo "Sudah ada: $target_dir (skip)"
+      if [[ -d "$target_dir/.git" ]]; then
+        if [[ "$AUTO_UPDATE" -eq 1 ]]; then
+          echo "Update $target_dir"
+          git -C "$target_dir" pull --ff-only
+        else
+          echo "Sudah ada: $target_dir (skip)"
+        fi
+        continue
       fi
-      continue
-    fi
 
-    echo "Cloning $repo_url -> $target_dir"
-    git clone "$repo_url" "$target_dir"
-  done
+      echo "Cloning $repo_url -> $target_dir"
+      git clone "$repo_url" "$target_dir"
+    done
+  fi
 fi
 
 if [[ "${#cmd_list[@]}" -gt 0 ]]; then

@@ -15,6 +15,7 @@ Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
 
 Catatan penting: script ini **meng-clone repo** dan **menjalankan command** yang kamu tulis di `repos.md`.
 Proses instalasi aplikasi tergantung pada masing-masing repo/command (misalnya `cmd:` untuk installer).
+Sekarang defaultnya **tidak clone** agar hemat kuota. Gunakan `--clone` jika ingin mengambil repo.
 
 ## Satu Perintah (PC Baru)
 
@@ -35,6 +36,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/bheibz/bheibzcolection/m
 ./install.sh --run-commands
 ./install.sh --install-deps
 ./install.sh --no-update
+./install.sh --clone
 ```
 
 ## Catatan
