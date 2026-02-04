@@ -23,3 +23,8 @@ Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
 - Jika repo sudah ada, script akan `git pull` otomatis (gunakan `--no-update` untuk skip).
 - Folder hasil clone akan dibuat di `./vendor`.
 - Pastikan `git` sudah terpasang.
+
+## Auto Update (GitHub Actions)
+
+Repo ini punya workflow yang otomatis update setiap hari jam 02:00 UTC dan commit perubahan `vendor/` ke repo ini.
+Kamu juga bisa menjalankan manual lewat tab Actions di GitHub.
