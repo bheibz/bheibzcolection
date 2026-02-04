@@ -1,6 +1,21 @@
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2400&pause=500&color=111111&center=true&vCenter=true&width=700&lines=Bheibz+Collection+Installer;Satu+Perintah%2C+Semua+Terpasang;Auto+Update+Setiap+Hari" alt="typing" />
+  <br />
+  <img src="https://img.shields.io/github/license/bheibz/bheibzcolection" alt="license" />
+  <img src="https://img.shields.io/github/actions/workflow/status/bheibz/bheibzcolection/auto-update.yml" alt="actions" />
+  <img src="https://img.shields.io/github/last-commit/bheibz/bheibzcolection" alt="last-commit" />
+  <img src="https://img.shields.io/github/repo-size/bheibz/bheibzcolection" alt="repo-size" />
+</div>
+
 # Repo Installer
 
 Repo ini menginstall daftar repo GitHub yang kamu tulis di `repos.md`.
+
+## Satu Perintah (PC Baru)
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/bheibz/bheibzcolection/main/bootstrap.sh)"
+```
 
 ## Cara pakai
 
@@ -52,7 +67,7 @@ Daftar di bawah ini mengikuti isi `repos.md` saat ini:
 - deps: wget curl python3
 <!-- repos:list:end -->
 
-## Promosi
+## Info Kami
 
 - Web: https://github.com/bheibz/the-power-of-berbagi
 - GitHub: https://github.com/bheibz/bheibz
