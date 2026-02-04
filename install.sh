@@ -6,6 +6,7 @@ LIST_FILE="$ROOT_DIR/repos.md"
 DEST_DIR="$ROOT_DIR/vendor"
 RUN_COMMANDS=0
 INSTALL_DEPS=0
+AUTO_UPDATE=1
 
 deps_list=()
 cmd_list=()
@@ -15,9 +16,10 @@ for arg in "$@"; do
   case "$arg" in
     --run-commands) RUN_COMMANDS=1 ;;
     --install-deps) INSTALL_DEPS=1 ;;
+    --no-update) AUTO_UPDATE=0 ;;
     -h|--help)
       cat <<'USAGE'
-Usage: ./install.sh [--run-commands] [--install-deps]
+Usage: ./install.sh [--run-commands] [--install-deps] [--no-update]
 
 Reads repos.md and:
 - clones GitHub repos
@@ -117,7 +119,12 @@ if [[ "${#repo_list[@]}" -gt 0 ]]; then
     target_dir="$DEST_DIR/${owner}-${repo_name}"
 
     if [[ -d "$target_dir/.git" ]]; then
-      echo "Sudah ada: $target_dir (skip)"
+      if [[ "$AUTO_UPDATE" -eq 1 ]]; then
+        echo "Update $target_dir"
+        git -C "$target_dir" pull --ff-only
+      else
+        echo "Sudah ada: $target_dir (skip)"
+      fi
       continue
     fi
 
